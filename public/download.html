@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="downloadStyle.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <img src="logo.png" width="60" height="60">
+        </li>
+        <li>
+            <a href="user.html">Dentist</a>
+        </li>
+        <li>
+            <a href="signIn.html">Sign Out</a>
+        </li>
+    </ul>
+    <div class="container">
+        <h2 id="headDownload">Download File</h2>
+        <div class="dateSelect">
+            <label id="dateLabel">
+                <b>Date</b>
+            </label>
+            <input id="datePick" type="date" placeholder="Enter the date" name="date">
+        </div>
+        <div class="patientSelect1">
+            <label id="idLabel">
+                <b>From</b>
+            </label>
+            <select id="dropdown" name="patientID">
+                <option value="s1">2309600001</option>
+                <option value="s2">2309600002</option>
+                <option value="s3">2309600003</option>
+                <option value="s4">2309600004</option>
+                <option value="s5">2309600005</option>
+              </select>
+        </div>
+        <div class="patientSelect2">
+            <label id="idLabel">
+                <b>To</b>
+            </label>
+            <select name="patientID">
+                <option value="s1">2309600001</option>
+                <option value="s2">2309600002</option>
+                <option value="s3">2309600003</option>
+                <option value="s4">2309600004</option>
+                <option value="s5">2309600005</option>
+              </select>
+        </div>
+        <div class="something">
+            <div class="checkBoxLabel">
+                <label id="checkLabel">
+                    <b>Select categories</b>
+                </label>
+            </div>
+            <div class="check-container">
+                <div class="checkbox">
+                    <label class="myCheckbox">
+                        <input type="checkbox" value="parent">For Parents</label>
+                </div>
+                <div class="checkbox">
+                    <label class="myCheckbox">
+                        <input type="checkbox" value="advisor">For Advisor</label>
+                </div>
+                <div class="checkbox">
+                    <label class="myCheckbox">
+                        <input type="checkbox" value="principal">For Principal</label>
+                </div>
+                <div class="checkbox">
+                    <label class="myCheckbox">
+                        <input type="checkbox" value="dentist">For Dentist</label>
+                </div>
+                <div class="checkbox">
+                        <label class="myCheckbox">
+                            <input type="checkbox" value="excel">For Excel</label>
+                    </div>
+            </div>
+        </div>
+        <input type="file" id="saveFile" style="display:none">
+        <div class="forBtn">
+            <button class="downloadButton" onclick="chooseFile()">Download</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        function picked() {
+            alert("File is saved.");
+            window.location.href = "user.html";
+        }
+        function chooseFile() {
+            var input = $(document.createElement("input"));
+            input.attr("type", "file");
+            input.trigger("click"); // opening dialog
+            input.change(function(){
+                alert("file Saved");
+                window.location.href = "user.html";
+            });
+        }
+    </script>
+</body>
+</html>

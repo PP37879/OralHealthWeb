@@ -1,0 +1,25 @@
+{
+  "name": "prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "bcrypt": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mysql": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
