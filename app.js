@@ -8,6 +8,7 @@ const xlsx = require("xlsx-to-json");
 const app = express();
 const users = require('./routes/users'); 
 
+const index      = require("./routes/index") ;
 const port = 3000;
 app.use(cors());
 
@@ -23,7 +24,13 @@ app.use('/users',users);
 app.get('/',(req,res)=>{
     res.send('Invalid Endpoint');
 });
-//Start Server
+
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use("/",index);
 app.listen(port,()=>{
     console.log('Server started on port '+port);
     xlsx({
@@ -35,3 +42,4 @@ app.listen(port,()=>{
         }
     });
 });
+
