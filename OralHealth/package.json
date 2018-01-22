@@ -1,0 +1,25 @@
+{
+  "name": "oralhealth",
+  "version": "1.0.0",
+  "description": "OralHralth project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mysql": "^2.15.0",
+    "passport": "*",
+    "passport-jwt": "*",
+    "xls-to-json": "^0.4.0",
+    "xlsx": "^0.11.17",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "author": "book & pp",
+  "license": "ISC"
+}
