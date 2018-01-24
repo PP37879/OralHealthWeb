@@ -1,3 +1,57 @@
-<p>
-  import works!
-</p>
+<form class="import">
+  <div class="import-form">
+    <div class="input">
+      <h1 id="header">เพิ่มข้อมูลผู้ป่วย / นักเรียน</h1>
+      <input type="text" class="form-control" id="school_name" placeholder="ชื่อโรงเรียน">
+      <input type="text" class="form-control" id="school_addr" placeholder="ที่ตั้งของโรงเรียน">
+      <input type="text" class="form-control" id="std_name" placeholder="ชื่อ-สกุลนักเรียน">
+      <label>เพศ</label>
+      <label class="radio-inline">
+        <input type="radio" id="male" name="optradio">&nbsp;&nbsp;ชาย</label>
+      <label class="radio-inline">
+        <input type="radio" id="female" name="optradio">&nbsp;&nbsp;หญิง</label>
+
+      <div>
+        <label style="margin-top:25px">วันเกิด</label>
+        <input type="date" class="form-control" id="birth" placeholder="วันเกิด">
+      </div>
+      <input type="text" class="form-control" id="std_addr" placeholder="ที่อยู่ของนักเรียน">
+      <input type="text" class="form-control" id="nation" placeholder="สัญชาติ">
+      <input type="text" class="form-control" id="religionr" placeholder="ศาสนา">
+      <input type="text" class="form-control" id="dad_name" placeholder="ชื่อ-สกุลบิดา">
+      <input type="text" class="form-control" id="mom_name" placeholder="ชื่อ-สกุลมารดา">
+
+      <div class="form-group">
+        <label for="sel1">สถานภาพของบิดา
+        </label>
+        <select class="form-control" id="sel1">
+          <option>มีชีวิตอยู่</option>
+          <option>หย่าร้าง</option>
+          <option>ถึงแก่กรรม</option>
+        </select>
+
+
+
+        <label for="sel2">สถานภาพของมารดา
+        </label>
+        <select class="form-control" id="sel2">
+          <option>มีชีวิตอยู่</option>
+          <option>หย่าร้าง</option>
+          <option>ถึงแก่กรรม</option>
+        </select>
+      </div>
+      <input type="text" class="form-control" id="dad_job" placeholder="อาชีพของบิดา">
+      <input type="text" class="form-control" id="mom_job" placeholder="อาชีพของมารดา">
+      <input type="text" class="form-control" id="dad_name" placeholder="ชื่อ-สกุลผู้ปกครอง">
+      <input type="text" class="form-control" id="parent_phone" placeholder="เบอร์โทรศัพท์ผู้ปกครอง">
+      <input type="text" class="form-control" id="parent_addr" placeholder="ที่อยู่ของผู้ปกครอง">
+      <input type="text" class="form-control" id="teacher" placeholder="ชื่อครูประจำชั้น">
+      <input type="text" class="form-control" id="master" placeholder="ชื่อผู้อำนวยการของโรงเรียน">
+      <input type="number" class="form-control" id="decay_num" placeholder="จำนวนฟันผุที่ตรวจพบในครั้งนี้">
+      <div class="forBtn">
+        <button type="submit" class="btn btn-success" [routerLink]="['/menu']">เสร็จสิ้น</button>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="import.component.js"></script>

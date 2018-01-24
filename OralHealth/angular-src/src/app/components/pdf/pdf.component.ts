@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pdf.component.html',
   styleUrls: ['./pdf.component.css']
 })
-export class PdfComponent implements OnInit {
+export class PDFComponent implements OnInit {
 
   constructor() { }
 

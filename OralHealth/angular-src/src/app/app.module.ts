@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PDFComponent } from './components/pdf/pdf.component';
+import { ExcelComponent } from './components/excel/excel.component';
 import { ImportComponent } from './components/import/import.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { PdfComponent } from './components/pdf/pdf.component';
-import { ExcelComponent } from './components/excel/excel.component';
-import { DownloadselectionComponent } from './components/downloadselection/downloadselection.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FileComponent } from './components/file/file.component';
 
 const appRoutes : Routes = [
   {path : '' , component : HomeComponent},
@@ -21,23 +21,23 @@ const appRoutes : Routes = [
   {path : 'register' , component : RegisterComponent},
   {path : 'import' , component : ImportComponent},
   {path : 'menu' , component : MenuComponent},
-  {path : 'pdf' , component : PdfComponent},
+  {path : 'pdf' , component : PDFComponent},
   {path : 'excel' , component : ExcelComponent},
-  {path : 'downloadselection' , component : DownloadselectionComponent}
+  {path : 'file' , component : FileComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    LoginComponent,
     HomeComponent,
+    LoginComponent,
     RegisterComponent,
+    PDFComponent,
+    ExcelComponent,
     ImportComponent,
     MenuComponent,
-    PdfComponent,
-    ExcelComponent,
-    DownloadselectionComponent
+    NavbarComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,
