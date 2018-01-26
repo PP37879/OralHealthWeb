@@ -7,8 +7,8 @@ const mySql = require("mysql")
 const xlsx = require("xlsx-to-json");
 const app = express();
 const users = require('./routes/users');
-
-// const index = require("./routes/index") ;
+const excel = require('./routes/excel');
+const index = require("./routes/index") ;
 
 //port number
 const port = 3000;
@@ -22,7 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Body-Parser Middleware
 app.use(bodyParser.json());
 
-app.use('/users', users);
+app.use("/",index);
+
 
 //Index Route
 app.get('/', (req, res) => {
@@ -34,7 +35,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-// app.use("/",index);
+
 app.listen(port, () => {
     console.log('Server started on port ' + port);
     // xlsx({
@@ -47,32 +48,32 @@ app.listen(port, () => {
     // });
 });
 
-function callExcel() {
-    xlsx('test.xlsx', function (err, data) {
-        if (err) throw err;
-        //console.log(jsonDataArray(data));
-        console.log(JSON.stringify(convertToJSON(data)));
-        //console.log(data);
-    });
-};
+// function callExcel() {
+//     xlsx('test.xlsx', function (err, data) {
+//         if (err) throw err;
+//         //console.log(jsonDataArray(data));
+//         console.log(JSON.stringify(convertToJSON(data)));
+//         //console.log(data);
+//     });
+// };
 
-function convertToJSON(array) {
-    var first = array[0].join()
-    var headers = first.split(',');
+// function convertToJSON(array) {
+//     var first = array[0].join()
+//     var headers = first.split(',');
 
-    var jsonData = [];
-    for (var i = 1, length = array.length; i < length; i++) {
+//     var jsonData = [];
+//     for (var i = 1, length = array.length; i < length; i++) {
 
-        var myRow = array[i].join();
-        var row = myRow.split(',');
+//         var myRow = array[i].join();
+//         var row = myRow.split(',');
 
-        var data = {};
-        for (var x = 0; x < row.length; x++) {
-            data[headers[x]] = row[x];
-        }
-        jsonData.push(data);
+//         var data = {};
+//         for (var x = 0; x < row.length; x++) {
+//             data[headers[x]] = row[x];
+//         }
+//         jsonData.push(data);
 
-    }
-    return jsonData;
-};
+//     }
+//     return jsonData;
+// };
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
+import { Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -25,6 +26,11 @@ const appRoutes : Routes = [
   {path : 'excel' , component : ExcelComponent},
   {path : 'file' , component : FileComponent}
 ]
+
+@Component({
+	selector: 'app-root',
+	template: `<sheetjs></sheetjs>`
+})
 
 @NgModule({
   declarations: [
