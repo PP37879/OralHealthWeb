@@ -8,12 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./file.component.css']
 })
 export class FileComponent implements OnInit {
-
-  file: File;
-  constructor(
-    private dataService: DataService,
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit() {
     // this.dataService.convertExcelToJson().subscribe(inputfile => {
