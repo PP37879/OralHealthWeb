@@ -1,15 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<mat-form-field>
-    <input matInput placeholder="ID" [(ngModel)]="id" name="id">
-  </mat-form-field>
-  <mat-form-field >
-      <input matInput placeholder="School name" [(ngModel)]="sname" name="sname">
-  </mat-form-field>
-  <mat-form-field >
-      <input matInput placeholder="name" [(ngModel)]="name" name="name">
-  </mat-form-field>
-  <button mat-raised-button class="saveBtn" mat-button color="accent" (click)="add()"> ADD </button>
-  
-  
-  
+<app-navbar></app-navbar>
+<div>
+  <router-outlet></router-outlet>
+</div>
