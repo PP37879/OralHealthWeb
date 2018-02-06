@@ -17,18 +17,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FileComponent } from './components/file/file.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material'
-import {MatFormFieldModule} from '@angular/material';
-import {MatCardModule} from '@angular/material';
-import {MatIconModule,MatDialogModule} from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatTableModule} from '@angular/material/table';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatChipsModule} from '@angular/material/chips';
 
 import { InsertService } from './services/insert.service';
 const appRoutes : Routes = [
@@ -63,28 +51,13 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, 
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatIconModule,
-    FormsModule,
-    HttpModule,
-    MatInputModule,
-    MatTabsModule,
-    MatSidenavModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatChipsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
     InsertService,
-    
+   
   ],
   bootstrap: [AppComponent]
 })

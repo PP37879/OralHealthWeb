@@ -1,12 +1,6 @@
 <div class="desc">เลือกไฟล์ที่ต้องการนำเข้าข้อมูล</div>
 <div class="desc">ไฟล์ต้องมีสกุลไฟล์เป็น .xlsx เท่านั้น</div>
 <div class="import-form">
-<input type="file" class="form-control" id="file">
-<button type="submit" class="btn btn-success">OK</button>
+    <input type="file" (change)="incomingfile($event)" />
+    <button type="submit" class="btn btn-success" (click)="Upload()">OK</button>
 </div>
-
-<form id        =  "uploadForm"
-    enctype   =  "multipart/form-data"
-    action    =  "upload"
-    method    =  "post"
->
