@@ -43,21 +43,21 @@ export class ImportComponent {
     this.std.std_name = this.std_name;
     this.std.gender = this.gender;
     this.std.dateOfBirth = this.dateOfBirth;
-    this.std_addr = this.std_addr;
-    this.nation = this.nation;
-    this.religion = this.religion;
-    this.dad_name = this.dad_name;
-    this.mom_name = this.mom_name;
-    this.dad_status = this.dad_status;
-    this.mom_status = this.mom_status;
-    this.dad_job = this.dad_job;
-    this.mom_job = this.mom_job;
-    this.parent_name = this.parent_name;
-    this.parent_phone = this.parent_phone;
-    this.parent_addr = this.parent_addr;
-    this.teacher = this.teacher;
-    this.master = this.master;
-    this.decay_num = this.decay_num;
+    this.std.std_addr = this.std_addr;
+    this.std.nation = this.nation;
+    this.std.religion = this.religion;
+    this.std.dad_name = this.dad_name;
+    this.std.mom_name = this.mom_name;
+    this.std.dad_status = this.dad_status;
+    this.std.mom_status = this.mom_status;
+    this.std.dad_job = this.dad_job;
+    this.std.mom_job = this.mom_job;
+    this.std.parent_name = this.parent_name;
+    this.std.parent_phone = this.parent_phone;
+    this.std.parent_addr = this.parent_addr;
+    this.std.teacher = this.teacher;
+    this.std.master = this.master;
+    this.std.decay_num = this.decay_num;
 
     this.int.ins(this.std).subscribe(
       response =>{
