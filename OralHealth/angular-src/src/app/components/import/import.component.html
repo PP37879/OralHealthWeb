@@ -1,3 +1,18 @@
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="./app/success.png" style="width:100px; height:100px;">
+        <p>เพิ่มข้อมูลนักเรียน / ผู้ป่วยเรียบร้อย</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <form class="import">
   <div class="import-form">
     <div class="input">
@@ -47,7 +62,7 @@
       <input type="text" class="form-control" id="master" placeholder="ชื่อผู้อำนวยการของโรงเรียน" name="master" [(ngModel)]="master">
       <input type="number" class="form-control" id="decay_num" placeholder="จำนวนฟันผุที่ตรวจพบในครั้งนี้" name="decay_num" [(ngModel)]="decay_num">
       <div class="forBtn">
-        <button type="submit" class="btn btn-success" (click)="add()">เสร็จสิ้น</button>
+        <button type="submit" class="btn btn-success" (click)="add()" data-toggle="modal" data-target="#myModal" id="importSubmit" onclick="showModal()">เสร็จสิ้น</button>
       </div>
     </div>
   </div>
