@@ -16,21 +16,49 @@ export class FileComponent implements OnInit {
   }
 
   Upload() {
+
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
       this.arrayBuffer = fileReader.result;
       var data = new Uint8Array(this.arrayBuffer);
       var arr = new Array();
-      for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+      for (var i = 0; i != data.length; ++i)
+        arr[i] = String.fromCharCode(data[i]);
       var bstr = arr.join("");
       var workbook = XLSX.read(bstr, { type: "binary" });
       var first_sheet_name = workbook.SheetNames[0];
       var worksheet = workbook.Sheets[first_sheet_name];
       console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
-      console.log(worksheet);
-    }
+      // console.log(XLSX.utils.decode_range(worksheet['!ref']));
+
+      console.log(this.sheet2arr(worksheet));
+     }
     fileReader.readAsArrayBuffer(this.file);
   }
+
+  sheet2arr(sheet){
+    var result = [];
+    var row;
+    var rowNum;
+    var colNum;
+    var range = XLSX.utils.decode_range(sheet['!ref']);
+    for(rowNum = range.s.r; rowNum <= range.e.r; rowNum++){
+       row = [];
+        for(colNum=range.s.c; colNum<=range.e.c; colNum++){
+           var nextCell = sheet[
+              XLSX.utils.encode_cell({r: rowNum, c: colNum})
+           ];
+           if( typeof nextCell === 'undefined' ){
+              row.push(void 0);
+           } else row.push(nextCell.w);
+           console.log(nextCell);
+        }
+        result.push(row);
+        // console.log(result);
+    }
+    return result;
+ }
+
 
   constructor() { }
 
