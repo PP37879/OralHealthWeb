@@ -16,7 +16,7 @@ export class FileComponent implements OnInit {
   }
 
   Upload() {
-
+    var columnSize;
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
       this.arrayBuffer = fileReader.result;
@@ -31,7 +31,15 @@ export class FileComponent implements OnInit {
       console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
       // console.log(XLSX.utils.decode_range(worksheet['!ref']));
 
-      console.log(this.sheet2arr(worksheet));
+      var worksheetArray = new Array();
+      worksheetArray = this.sheet2arr(worksheet);
+      for(var i=0;i<worksheetArray.length;i++){
+        console.log("LINE :"+i+" ");
+        for(var j=0;j<worksheetArray[i].length;j++){
+          console.log("COL : "+j+" "+worksheetArray[i][j]);
+        }
+        console.log("\n");
+       }
      }
     fileReader.readAsArrayBuffer(this.file);
   }
