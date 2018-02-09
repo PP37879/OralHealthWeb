@@ -90,12 +90,25 @@ export class FileComponent implements OnInit {
           this.master = worksheetArray[row][18];
           this.decay_num = worksheetArray[row][19];
 
+<<<<<<< HEAD
           console.log(this.decay_num);
           this.add();
         // }
         
       }
     }
+=======
+      var worksheetArray = new Array();
+      worksheetArray = this.sheet2arr(worksheet);
+      for(var i=0;i<worksheetArray.length;i++){
+        console.log("LINE :"+i+" ");
+        for(var j=0;j<worksheetArray[i].length;j++){
+          console.log("COL : "+j+" "+worksheetArray[i][j]);
+        }
+        console.log("\n");
+       }
+     }
+>>>>>>> c738c6d0cc4a73f0b1bf2c7c6d32fe67ebb9139a
     fileReader.readAsArrayBuffer(this.file);
   }
 
