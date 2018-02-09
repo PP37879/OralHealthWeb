@@ -3,7 +3,8 @@
 completed
 - insert data from import.html to database
 - convert excel file to json in file.html
+- insert data from excel to database
 
 bug
-- insert data from excel to database
+- smart format excel
 

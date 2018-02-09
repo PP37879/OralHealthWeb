@@ -22,3 +22,11 @@ input#file.form-control{
     height: auto;
 }
 
+.modal-body{
+    text-align: center;
+    font-family: 'Mitr', cursive;
+    padding: 10px;
+    margin: auto;
+    max-width: 700px;
+    font-size: 24px;
+}
